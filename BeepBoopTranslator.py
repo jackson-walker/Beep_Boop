@@ -1,23 +1,17 @@
-from tkinter import *
+import Tkinter as tk
 
-class mainWindows:
+class mainWindows(tk.Frame):
     def __init__(self, master):
         self.m = master
-        Frame.__init__(self, master)
-        self.topFrame = Frame(self.m)
-        self.middleFrame = Frame(self.m)
-        self.midLeftFrame = Frame(self.m)
-        self.bottomFrame = Frame(self.m)
-        self.topFrame.pack(Side=TOP)
-        self.middleFrame.pack()
-        self.midLeftFrame.pack(Side=LEFT)
-        self.bottomFrame.pack(Side=BOTTOM)
+        tk.Frame.__init__(self, master)
+        self.grid()
+		self.createWidgets()
 
 
 if __name__=='__main__':
     root = Tk()
 
-    w, h = 800, 500
+    w, h = 800, 501
     sw, sh = root.winfo_screenwidth(), root.winfo_screenheight()
 
     #setting up tkinter environment
